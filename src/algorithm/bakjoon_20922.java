@@ -28,7 +28,7 @@ public class bakjoon_20922 {
         while(right<N){
             int num = arr[right];
 
-            if(countArr[num] <M){
+            if(countArr[num] < M){
                 countArr[num]++;
                 right++;
                 ans = Math.max(ans, right-left);

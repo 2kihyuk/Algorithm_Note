@@ -11,7 +11,6 @@ public class 토마토_7576 {
     private static int M;
     private static int[][]arr;
     private static boolean[][] visited;
-
     private  static int[]dx = {-1,1,0,0};
     private static int[]dy = {0,0,-1,1};
     public static void main(String[] args)throws Exception {
@@ -30,13 +29,13 @@ public class 토마토_7576 {
             st = new StringTokenizer(br.readLine().trim());
             for(int j =0; j<N;j++){
                 arr[i][j] = Integer.parseInt(st.nextToken());
-                if(arr[i][j] == 1){
-                    list.add(new int[]{i,j});
+                if (arr[i][j] == 1) {
+                    list.add(new int[]{i, j});
                 }
             }
         }
 
-        int day  = bfs(list);
+        int day = bfs(list);
 
         for(int i = 0; i<M; i++){
             for(int j = 0;j<N; j++){
@@ -45,7 +44,6 @@ public class 토마토_7576 {
                 }
             }
         }
-
 
         boolean ans = true;
 

@@ -11,10 +11,10 @@ public class 벽부수고이동하기_2206 {
     private static class Node{
         int x,y,dist,broken;
         public Node(int x, int y, int dist, int broken){
-            this.x =x;
-            this.y =y;
+            this.x = x;
+            this.y = y;
             this.dist = dist;
-            this.broken =broken;
+            this.broken = broken;
         }
     }
 
@@ -33,6 +33,7 @@ public class 벽부수고이동하기_2206 {
         M = Integer.parseInt(st.nextToken());
 
         arr = new int[N][M];
+
         visited = new boolean[N][M][2];
 
         for(int i = 0; i<N; i++){
@@ -43,7 +44,6 @@ public class 벽부수고이동하기_2206 {
         }
 
         int ans = bfs();
-
 
         System.out.println(ans);
 
@@ -66,14 +66,17 @@ public class 벽부수고이동하기_2206 {
                 int ny = now.y + dy[i];
 
                 if(nx < 0 || ny < 0 || nx >= N || ny >= M) continue;
+
                 if(arr[nx][ny] == 0 && !visited[nx][ny][now.broken]){
                     visited[nx][ny][now.broken] = true;
                     q.offer(new Node(nx,ny,now.dist+1,now.broken));
                 }
+
                 if(arr[nx][ny] == 1 && now.broken == 0 && !visited[nx][ny][1]){
                     visited[nx][ny][1] = true;
                     q.offer(new Node(nx,ny, now.dist +1, 1));
                 }
+
             }
         }
         return -1;

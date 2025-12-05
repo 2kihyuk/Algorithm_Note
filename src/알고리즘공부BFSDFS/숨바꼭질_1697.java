@@ -43,9 +43,9 @@ public class 숨바꼭질_1697 {
                 return dist[current];
             }
 
-            int nx1 = current +1;
-            int nx2 = current -1;
-            int nx3 = current *2;
+            int nx1 = current + 1;
+            int nx2 = current - 1;
+            int nx3 = current * 2;
 
             if(nx1 < 100001 && dist[nx1] == -1){
                 dist[nx1] = dist[current] + 1;

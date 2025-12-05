@@ -11,6 +11,7 @@ public class 요리사 {
     private static int[]numbers;
     private static int ans;
 
+
     public static void main(String[] args)throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;

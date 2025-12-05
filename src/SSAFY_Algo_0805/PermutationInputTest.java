@@ -30,25 +30,42 @@ public class PermutationInputTest {
 
         System.out.println("총 개수는 :" + totalCnt);
     }
+//    private static void permutation(int cnt){
+//
+//        if(cnt == R){
+//            System.out.println(Arrays.toString(numbers));
+//            totalCnt++;
+//            return;
+//        }
+//
+//        for(int i = 0; i<N;i++){
+//
+//            if(isSelected[i]){
+//                continue;
+//            }
+//
+//            numbers[cnt] = input[i];
+//            isSelected[i] = true;
+//            permutation(cnt+1);
+//            isSelected[i] = false;
+//
+//        }
+//    }
     private static void permutation(int cnt){
-
-        if(cnt == R){
+        if(cnt == R) {
             System.out.println(Arrays.toString(numbers));
             totalCnt++;
             return;
+
         }
 
-        for(int i = 0; i<N;i++){
+        for(int i =0 ; i<N; i++){
 
-            if(isSelected[i]){
-                continue;
-            }
-
-            numbers[cnt] = input[i];
+            if(isSelected[i]) continue;
+            numbers[cnt] = i;
             isSelected[i] = true;
             permutation(cnt+1);
             isSelected[i] = false;
-
         }
     }
 }
